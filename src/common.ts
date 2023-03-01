@@ -2,21 +2,6 @@
 
 export abstract class PM2 {
   /**
-   * Either connects to a running pm2 daemon (“God”) or launches and daemonizes one.
-   * Once launched, the pm2 process will keep running after the script exits.
-   */
-  abstract connect(): Promise<void>;
-  /**
-   * Either connects to a running pm2 daemon (“God”) or launches and daemonizes one.
-   * Once launched, the pm2 process will keep running after the script exits.
-   * @param noDaemonMode - (Default: false) If true is passed for the first argument
-   * pm2 will not be run as a daemon and will die when the related script exits.
-   * By default, pm2 stays alive after your script exits.
-   * If pm2 is already running, your script will link to the existing daemon but will die once your process exits.
-   */
-  abstract connect(noDaemonMode: boolean): Promise<void>;
-
-  /**
    * Starts a script that will be managed by pm2.
    * @param options - Options
    * The proc parameter will be a pm2 process object.

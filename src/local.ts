@@ -8,7 +8,7 @@ import type {
 import { isConfigFile } from "./common.js";
 import pm2 from "pm2";
 export default class implements PM2 {
-  connect(noDaemonMode?: boolean): Promise<void> {
+  _connect(noDaemonMode?: boolean): Promise<void> {
     return new Promise((resolve, reject) => {
       function callback(err?: Error) {
         if (err) {

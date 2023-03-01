@@ -27,7 +27,6 @@ export default class implements PM2 {
       ],
     });
   }
-  async connect(noDaemonMode?: boolean): Promise<void> {}
   async start(options: StartOptions): Promise<Proc>;
   async start(jsonConfigFile: string): Promise<Proc>;
   async start(script: string): Promise<Proc>;
