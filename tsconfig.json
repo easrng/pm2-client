@@ -11,7 +11,7 @@
     "alwaysStrict": true,
     "esModuleInterop": true,
     "declaration": true,
-    "target": "ES2022",
+    "target": "ES2021",
     "module": "ESNext",
     "moduleResolution": "node",
     "outDir": "dist"
