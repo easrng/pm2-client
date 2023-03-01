@@ -19,7 +19,7 @@ export default class implements PM2 {
     this.#client = createTRPCProxyClient<AppRouter>({
       links: [
         httpBatchLink({
-          url: url.href,
+          url: url.origin + url.pathname.replace(/\/$/, "") + url.search,
           headers: {
             Authorization: "Basic " + btoa("pm2:" + password),
           },
