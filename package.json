@@ -1,0 +1,45 @@
+{
+  "name": "pm2-client",
+  "version": "0.0.1",
+  "description": "a client for pm2 instances both local and remote (via pm2-server)",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier -w ./*.json ./src/*.ts && git add ./*.json ./src/*.ts",
+    "build": "rm ./dist/*; tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/easrng/pm2-client.git"
+  },
+  "keywords": [
+    "pm2",
+    "remote",
+    "monitoring"
+  ],
+  "author": "easrng",
+  "license": "SEE LICENSE IN be gay do crime",
+  "bugs": {
+    "url": "https://github.com/easrng/pm2-client/issues"
+  },
+  "homepage": "https://github.com/easrng/pm2-client#readme",
+  "pre-commit": [
+    "format",
+    "build"
+  ],
+  "type": "module",
+  "devDependencies": {
+    "pm2": "^5.2.2",
+    "pm2-server": "^1.0.8",
+    "pre-commit": "^1.2.2",
+    "prettier": "^2.8.4",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@trpc/client": "^10.13.2"
+  },
+  "files": [
+    "./dist/"
+  ]
+}
